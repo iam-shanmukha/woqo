@@ -6,10 +6,9 @@ quotes=[]
 td = today.day
 tm = today.month
 ty = today.year
-### DICTIONARY.COM ###
 
 print(r'''
-	
+
 __        __           ___          
 \ \      / /   ___    / _ \    ___  
  \ \ /\ / /   / _ \  | | | |  / _ \ 
@@ -19,6 +18,7 @@ __        __           ___
 
 	''')
 
+### DICTIONARY.COM ###
 word = "https://www.dictionary.com/e/word-of-the-day/"
 word_page = requests.get(word)
 word_soup = BeautifulSoup(word_page.content,'html.parser')
