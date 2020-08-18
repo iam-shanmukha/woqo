@@ -1,4 +1,7 @@
+#!/usr/bin/python
+import subprocess
 import requests
+from subprocess import Popen
 from datetime import date
 from bs4 import BeautifulSoup
 today = date.today()
@@ -40,3 +43,4 @@ print("########### QUOTE OF THE DAY - {}/{}/{} ###########\n".format(td,tm,ty))
 for quote in view_quote:
 	quotes.append(quote.text)
 print(quotes[1])
+subprocess.Popen(['notify-send', quotes[1]])
